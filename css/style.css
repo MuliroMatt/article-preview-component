@@ -1,0 +1,203 @@
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Manrope", sans-serif;
+}
+
+body {
+  background-color: hsl(210, 46%, 95%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.card {
+  background-color: hsl(0, 0%, 100%);
+  border-radius: 10px;
+  width: 85%;
+  max-width: 725px;
+  height: 280px;
+  display: grid;
+  grid-template-columns: 280px 1fr;
+  grid-template-rows: 280px;
+}
+.card .card__image {
+  overflow: hidden;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+.card .card__image img {
+  height: 100%;
+}
+.card .card__content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.card .card__content__text {
+  padding: 32px 40px 0;
+}
+.card .card__content__text__title {
+  color: hsl(217, 19%, 35%);
+  font-weight: 700;
+  font-size: 20px;
+}
+.card .card__content__text__description {
+  color: hsl(214, 17%, 51%);
+  font-size: 13px;
+  font-weight: 500;
+  line-height: 160%;
+  margin-top: 12px;
+}
+.card .card__content__infos {
+  padding: 0 40px 28px;
+  display: flex;
+  position: relative;
+  align-items: center;
+}
+.card .card__content__infos__image {
+  width: 40px;
+  height: 40px;
+  border-radius: 100px;
+  overflow: hidden;
+}
+.card .card__content__infos__image img {
+  width: 100%;
+}
+.card .card__content__infos__text {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto 0 12px;
+  gap: 4px;
+}
+.card .card__content__infos__text__name {
+  font-weight: 700;
+  font-size: 13px;
+  color: hsl(217, 19%, 35%);
+}
+.card .card__content__infos__text__date {
+  color: hsl(212, 23%, 69%);
+  font-size: 13px;
+}
+.card .card__content__infos .share {
+  background-color: hsl(217, 19%, 35%);
+  border-radius: 10px;
+  position: absolute;
+  top: -80px;
+  right: -53px;
+  padding: 16px 32px;
+  display: none;
+  align-items: center;
+  justify-content: center;
+}
+.card .card__content__infos .share.open {
+  display: flex;
+}
+.card .card__content__infos .share::after {
+  content: "";
+  width: 0;
+  height: 0;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-top: 10px solid hsl(217, 19%, 35%);
+  position: absolute;
+  bottom: -10px;
+}
+.card .card__content__infos .share__text {
+  color: hsl(212, 23%, 69%);
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 4px;
+  margin-right: 16px;
+}
+.card .card__content__infos .share__social-icons {
+  color: hsl(0, 0%, 100%);
+  font-size: 20px;
+  display: flex;
+  gap: 12px;
+}
+.card .card__content__infos .share__social-icons i:hover {
+  transition: 0.5s;
+  cursor: pointer;
+  transform: translate(1px, -2px);
+}
+
+.share-icon {
+  background-color: hsl(210, 46%, 95%);
+  padding: 8px;
+  border-radius: 100px;
+  color: hsl(214, 17%, 51%);
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  z-index: 999;
+}
+.share-icon--active {
+  background-color: hsl(214, 17%, 51%);
+  color: hsl(210, 46%, 95%);
+}
+
+@media screen and (max-width: 890px) {
+  .card {
+    height: auto;
+    grid-template-columns: 1fr;
+    grid-template-rows: 200px 1fr;
+  }
+  .card .card__image {
+    overflow: hidden;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    border-bottom-left-radius: 0;
+    display: flex;
+    align-items: center;
+  }
+  .card .card__image img {
+    height: auto;
+    width: 100%;
+  }
+  .card .card__content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  .card .card__content__text {
+    padding: 28px 28px 0;
+  }
+  .card .card__content__text__title {
+    color: hsl(217, 19%, 35%);
+    font-weight: 700;
+    font-size: 16px;
+  }
+  .card .card__content__text__description {
+    color: hsl(214, 17%, 51%);
+    font-size: 13px;
+    font-weight: 500;
+    line-height: 160%;
+    margin: 12px 0 32px;
+  }
+  .card .card__content__infos {
+    padding: 0 28px 20px;
+    display: flex;
+    position: relative;
+    align-items: center;
+  }
+  .card .card__content__infos .share {
+    top: auto;
+    width: 100%;
+    left: 0;
+    padding: 28px 28px;
+    justify-content: flex-start;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+  }
+  .card .card__content__infos .share::after {
+    display: none;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */
