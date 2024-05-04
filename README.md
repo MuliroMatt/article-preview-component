@@ -27,7 +27,7 @@ Users should be able to:
 
 ### Links
 
-- My Solution: [My Solution](https://your-solution-url.com)
+- My Solution: [My Solution](https://muliromatt.github.io/article-preview-component/)
 
 ## My process
 
